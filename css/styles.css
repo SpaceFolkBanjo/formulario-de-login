@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: rgba(54, 33, 0, 0.46);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: -50px auto 20px auto;
+  border-radius: 50%;
+  background-color: #ffffff21;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  align-items: center;
+  height: 100px;
+  width: 100px;
+}
+
+.login-form {
+  padding: 20px;
+  height: 300px;
+  width: 250px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  color: #fee8e8;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#loginBtn {
+  width: 50%;
+  padding: 10px;
+  background-color: #332301;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#loginBtn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+#loginBtn:hover::after {
+  transform: translateX(0);
+}
